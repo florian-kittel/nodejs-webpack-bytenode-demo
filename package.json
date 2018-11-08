@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-webpack-bytenode-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production && bytenode --compile ./dist/app.bundle.js ",
+    "bytenode": "bytenode",
+    "start:bundle": "cd dist && node app.bundle.js",
+    "start:prod": "bytenode -r ./dist/app.bundle.jsc",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bytenode": "^0.2.1",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
