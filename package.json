@@ -1,8 +1,12 @@
 {
   "name": "nodejs-webpack-bytenode-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js REST API bundled via webpack and compiled via bytenode to ship for a client server.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/florian-kittel/nodejs-webpack-bytenode-demo.git"
+  },
   "scripts": {
     "build": "webpack --mode production && bytenode --compile ./dist/app.bundle.js ",
     "bytenode": "bytenode",
@@ -11,8 +15,8 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Florian Kittel",
+  "license": "MIT",
   "dependencies": {
     "bytenode": "^0.2.1",
     "express": "^4.16.4"
