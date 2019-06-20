@@ -7,12 +7,6 @@ pipeline {
   }
   stages {
     stage('Install') {
-      agent {
-        node {
-          label 'Node'
-        }
-
-      }
       steps {
         sh 'npm -v'
         sh 'node -v'
