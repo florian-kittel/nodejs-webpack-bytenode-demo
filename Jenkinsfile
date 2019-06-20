@@ -4,6 +4,7 @@ pipeline {
     stage('Install') {
       steps {
         echo 'Hello'
+        sh 'npm -v'
       }
     }
   }
