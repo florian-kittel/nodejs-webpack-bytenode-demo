@@ -1,9 +1,27 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Install') {
+      agent {
+        node {
+          label 'Node'
+        }
+
+      }
       steps {
-        echo 'Started'
+        sh 'npm -v'
+        sh 'node -v'
+        sh 'npm install'
+      }
+    }
+    stage('Build') {
+      steps {
+        sh 'npm run build'
+      }
+    }
+    stage('Done') {
+      steps {
+        echo 'Done'
       }
     }
   }
