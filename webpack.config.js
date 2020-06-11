@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {
+    CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './index.js',
@@ -16,16 +18,12 @@ module.exports = {
         ],
     },
     module: {
-        rules: [
-            {
-                use: []
-            }
-        ]
+        rules: [{
+            use: []
+        }]
     },
     plugins: [
-        new CleanWebpackPlugin([
-            path.resolve('dist')
-        ]),
+        new CleanWebpackPlugin(),
         new webpack.IgnorePlugin(/^pg-native$/),
         new webpack.IgnorePlugin(/^pg.js.*/),
     ],
